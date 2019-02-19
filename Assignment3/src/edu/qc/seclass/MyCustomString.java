@@ -68,18 +68,7 @@ public class MyCustomString implements MyCustomStringInterface{
      
 	
 	
-	private static final String[] numNames = {
-		    " Zero",
-		    " One",
-		    " Two",
-		    " Three",
-		    " Four",
-		    " Five",
-		    " Six",
-		    " Seven",
-		    " Eight",
-		    " Nine"
-	};
+	
 	@Override
 	public void convertDigitsToNamesInSubstring(int startPosition, int endPosition) {
 		// TODO Auto-generated method stub
@@ -98,15 +87,10 @@ public class MyCustomString implements MyCustomStringInterface{
 			
 			
 			
-			
-			
-			
 		       String newstr = teststring.substring(startPosition-1, endPosition);
 			
 			
-		
-
-			
+	
 				newstr = newstr.replace("0", "Zero");
 				newstr = newstr.replace("1", "One");
 				newstr = newstr.replace("2", "Two");
