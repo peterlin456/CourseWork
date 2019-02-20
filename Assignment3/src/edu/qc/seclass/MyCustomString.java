@@ -15,14 +15,14 @@ public class MyCustomString implements MyCustomStringInterface{
 	@Override
 	public void setString(String string) {
 		// TODO Auto-generated method stub
-		this.teststring=string;
+		teststring=string;
 	}
 
 	@Override
 	public int countNumbers() {
 		// TODO Auto-generated method stub
 		/* Test for null, then counting the number in the string*/
-		if (this.teststring == null) {  
+		if (teststring == null) {  
 			throw new NullPointerException();
 		}
 		int count=0;
@@ -42,11 +42,14 @@ public class MyCustomString implements MyCustomStringInterface{
 		// TODO Auto-generated method stub
 		if (!startFromEnd) {
             String result = "";
-            for (int i = n; i < teststring.length(); i += n) {
-                result += teststring.charAt(i - 1);
+            
+            StringBuilder re = new StringBuilder();
+            for (int i = n; i < teststring.length(); i+=n) {
+            	   re.append(teststring.charAt(i-1));
             }
-            return result;  
-		   } else {
+            return re.toString();
+		   }
+			if (startFromEnd==true){
 			   String rev = "";
 			   
 			    int count = 1;
@@ -64,6 +67,8 @@ public class MyCustomString implements MyCustomStringInterface{
 		        }
 		        return sb.toString();
 		   }
+			return teststring;
+			
 		   }
      
 	
@@ -74,20 +79,21 @@ public class MyCustomString implements MyCustomStringInterface{
 		// TODO Auto-generated method stub
 		
 			if (startPosition > endPosition){
-				throw new IllegalArgumentException();
+				throw new IllegalArgumentException("IllegalArgumentException");
 			}
 			
-			if (startPosition <1 || endPosition > this.teststring.length()) {
-				throw new MyIndexOutOfBoundsException();
+			if (startPosition <=0 || endPosition > teststring.length()) {
+				throw new MyIndexOutOfBoundsException("MyIndexOutOfBoundException");
 			}
-			if (this.teststring == null) {  
-				throw new NullPointerException();
+			if (teststring == null) {  
+				throw new NullPointerException("null");
 			}
 
 			
+			else{
 			
-			
-		       String newstr = teststring.substring(startPosition-1, endPosition);
+	
+		         String newstr = teststring.substring(startPosition-1, endPosition);
 			
 			
 	
@@ -102,12 +108,11 @@ public class MyCustomString implements MyCustomStringInterface{
 				newstr = newstr.replace("8", "Eight");
 				newstr = newstr.replace("9", "Nine");
 				 
-				
-				
-				this.teststring = teststring.substring(0, startPosition-1) + newstr 
-				+ teststring.substring(endPosition, teststring.length());
+			
+			  teststring= teststring.substring(0, startPosition-1)+ newstr +teststring.substring(endPosition, teststring.length());
 			
 			}
+	}
 
 		
 			
