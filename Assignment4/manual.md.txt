@@ -1,0 +1,10 @@
+# Project Title
+
+Tip Calculator, Produces as output both the amount of tip and the total amount each person should pay for a 15%, 20%, and 25% tip.
+
+## Getting Started
+
+Enters the checkAmountValue and partySizeValue to show tip and total amount. 
+
+### Reccommend 
+Galaxy Nexus (API 21)
