@@ -1,0 +1,39 @@
+# File
+  File Size:
+     Empty.                   [single][property emptyFile]
+	 Not empty.
+ 
+  Number of occurrences in the file:
+      None.					  [single][if !emptyFile][property emptyOccurences]
+      One.				      [single][if !emptyFile]
+      Many.					  [if !emptyFile]
+  Number of occurrences in one line:
+      One.					  [if !emptyFile][if !emptyOccurences] 
+      Many.					  [if !emptyFile][if !emptyOccurences] 
+  Position of the occurrences in the file:
+      First line.			  [if !emptyFile][if !emptyOccurences]
+      Last line.			  [if !emptyFile][if !emptyOccurences]
+      Any.					  [if !emptyFile][if !emptyOccurences]
+
+# Input String
+	Length of string:	
+		Zero.                     [single][property zerovalue]
+		One.                      [if !zerovalue]
+		one to max.               [if !zerovalue]
+		Max.					  [if !zerovalue]
+		
+	Content of string:
+		alphanumeric characters.  [if !zerovalue]
+		special characters.       [if !zerovalue]
+		spaces.                   [if !zerovalue]
+
+# Nummber of file
+   Number of files for input repalce operation:
+        Zero.                   [error] 
+        One.                    [single] 
+        Multiple.
+		
+# Filename
+	Existence of a file corresponding to the file name:
+		Not exist.			[error]
+		Exist.
