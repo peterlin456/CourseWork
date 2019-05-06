@@ -44,9 +44,10 @@ public class BuggyClass {
 	        buggyMethod4 that contains a division by zero fault such that (1) every test suite that achieves 100%
 			statement coverage reveals the fault, and (2) it is possible to create a test suite that achieves 100% 
 			branch coverage and does not reveal the fault.
-	        This is impossible, because 100% statement coverage with the divisible by zero(error) will not terminate the exist/method 
-	        before 100% statement coverage is reached and 100% branch coverage can't exist or terminate in branches
-	        as the second part(last branch or else statement) that require without showing the error.
+	        This is impossible, because if you have a 100% branch coverage with division by zero.
+	        Which means we get 100% statement coverage that means every line of codes in the method
+			happened to be executed,so every outcome from the method is tested. So with 100% branch coverage 
+			will showing the error.
  
 	         */
 	    }
