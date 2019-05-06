@@ -1,10 +1,10 @@
-package edu.qc.seclass;
+package edu.qc.seclass.BuggyClass;
 
 import org.junit.*;
 
 import static org.junit.Assert.*;
 
-public class BuggyClassTestBC2 {
+public class BuggyClassTestSC2 {
 
 	 BuggyClass myBuggyClass;
 
@@ -17,9 +17,9 @@ public class BuggyClassTestBC2 {
 	    public void tearDown() {
 	        myBuggyClass = null;
 	    }
-	    
-	    @Test  // more than 50%
+	    //100% statement coverage
+	    @Test
 	    public void buggyMethod2() {
-	        assertEquals(2, myBuggyClass.buggyMethod2(3, 2));
+	        assertEquals(1, myBuggyClass.buggyMethod2(2, 2));
 	    }
 }

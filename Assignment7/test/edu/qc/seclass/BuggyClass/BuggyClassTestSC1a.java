@@ -1,4 +1,4 @@
-package edu.qc.seclass;
+package edu.qc.seclass.BuggyClass;
 
 import org.junit.*;
 
