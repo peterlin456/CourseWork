@@ -480,6 +480,7 @@ public class MainTest {
         assertFalse(Files.exists(Paths.get(inputFile.getPath() + ".bck")));
     }
     //start 30 test
+    // OPT TEST: b,l,f 
     
     @Test
     public void mainTest17() throws Exception {
@@ -497,6 +498,7 @@ public class MainTest {
         assertEquals("The files differ!", expected, actual);
         assertFalse(Files.exists(Paths.get(inputFile.getPath() + ".bck")));
     }
+    // OPT TEST:b,i
     @Test
     public void mainTest18() throws Exception {
         File inputFile = createInputFile3();
@@ -514,6 +516,7 @@ public class MainTest {
         assertEquals("The files differ!", expected, actual);
         assertFalse(Files.exists(Paths.get(inputFile.getPath() + ".bck")));
     }
+    // OPT TEST: l,i
     @Test
     public void mainTest19() throws Exception {
         File inputFile = createInputFile3();
@@ -531,6 +534,7 @@ public class MainTest {
         assertEquals("The files differ!", expected, actual);
         assertFalse(Files.exists(Paths.get(inputFile.getPath() + ".bck")));
     }
+    // OPT TEST:f,i
     @Test
     public void mainTest20() throws Exception {
         File inputFile = createInputFile3();
@@ -548,6 +552,7 @@ public class MainTest {
         assertEquals("The files differ!", expected, actual);
         assertFalse(Files.exists(Paths.get(inputFile.getPath() + ".bck")));
     }
+    // OPT TEST:b,f,i
     @Test
     public void mainTest21() throws Exception {
         File inputFile = createInputFile3();
@@ -565,6 +570,7 @@ public class MainTest {
         assertEquals("The files differ!", expected, actual);
         assertFalse(Files.exists(Paths.get(inputFile.getPath() + ".bck")));
     }
+    // OPT TEST:b,l,i
     @Test
     public void mainTest22() throws Exception {
         File inputFile = createInputFile3();
@@ -582,6 +588,7 @@ public class MainTest {
         assertEquals("The files differ!", expected, actual);
         assertFalse(Files.exists(Paths.get(inputFile.getPath() + ".bck")));
     }
+    // OPT TEST:b
     @Test
     public void mainTest23() throws Exception {
         File inputFile1 = createInputFile1();
@@ -621,6 +628,7 @@ public class MainTest {
         assertFalse(Files.exists(Paths.get(inputFile3.getPath() + ".bck")));
       
     }
+    // OPT TEST:l
     @Test
     public void mainTest24() throws Exception {
         File inputFile1 = createInputFile1();
@@ -660,7 +668,7 @@ public class MainTest {
         assertFalse(Files.exists(Paths.get(inputFile3.getPath() + ".bck")));
       
     }
-   
+    // OPT TEST:i,b
     @Test
     public void myMainTest23() throws Exception{
         File inputFile1 = createInputFile1();
@@ -681,7 +689,7 @@ public class MainTest {
         assertTrue(Files.exists(Paths.get(inputFile1.getPath() + ".bck")));
     }
 
-   
+    // OPT TEST:f,l,b
     @Test
     public void myMainTest24() throws Exception{
         File inputFile1 = createInputFile2();
@@ -704,7 +712,7 @@ public class MainTest {
         assertTrue(Files.exists(Paths.get(inputFile1.getPath() + ".bck")));
     }
 
-   
+    // OPT TEST:l,i,b
     @Test
     public void myMainTest25() throws Exception{
         File inputFile1 = createInputFile1();
@@ -725,7 +733,7 @@ public class MainTest {
         assertTrue(Files.exists(Paths.get(inputFile1.getPath() + ".bck")));
     }
 
-    
+    // OPT TEST:f,i,b
     @Test
     public void myMainTest26() throws Exception{
         File inputFile1 = createInputFile1();
@@ -746,15 +754,15 @@ public class MainTest {
         assertTrue(Files.exists(Paths.get(inputFile1.getPath() + ".bck")));
     }
 
-    
+    // no opt,no file
     @Test
     public void myMainTest27() throws Exception{
 
-        String args[] = {};
+        String args[] = {"--"};
         Main.main(args);
     }
 
-    
+    // OPT TEST:no opt
     @Test
     public void myMainTest28() throws Exception{
         File inputFile1 = createInputFile1();
@@ -774,7 +782,7 @@ public class MainTest {
 
     }
 
- 
+    // OPT TEST:-b,-f
     @Test
     public void myMainTest29() throws Exception{
         File inputFile1 = createInputFile1();
@@ -796,7 +804,7 @@ public class MainTest {
 
     }
 
-   
+    // OPT TEST:-l,-f
     @Test
     public void myMainTest30() throws Exception{
         File inputFile1 = createInputFile1();
@@ -816,7 +824,7 @@ public class MainTest {
 
     }
 
-   
+    // OPT TEST:-f
     @Test
     public void myMainTest31() throws Exception{
         File inputFile1 = createInputFile1();
@@ -836,7 +844,7 @@ public class MainTest {
 
     }
 
-
+    // OPT TEST:-b,-f
     @Test
     public void myMainTest32() throws Exception{
         File inputFile1 = createInputFile1();
@@ -858,7 +866,7 @@ public class MainTest {
 
     }
 
-  
+    // OPT TEST:-l
     @Test
     public void myMainTest33() throws Exception{
         File inputFile1 = createInputFile1();
@@ -878,7 +886,7 @@ public class MainTest {
 
     }
 
-   
+    // OPT TEST:-b,-l
     @Test
     public void myMainTest34() throws Exception{
         File inputFile1 = createInputFile1();
@@ -900,7 +908,7 @@ public class MainTest {
 
     }
 
-   
+    // OPT TEST:-i
     @Test
     public void myMainTest35() throws Exception{
         File inputFile1 = createInputFile1();
@@ -922,7 +930,7 @@ public class MainTest {
 
     }
 
-  
+    // OPT TEST:-i,-l,-f
     @Test
     public void myMainTest36() throws Exception{
         File inputFile1 = createInputFile1();
@@ -942,7 +950,7 @@ public class MainTest {
 
     }
 
-   
+    // OPT TEST:-f,-b
     @Test
     public void myMainTest37() throws Exception{
         File inputFile1 = createInputFile1();
@@ -964,7 +972,7 @@ public class MainTest {
 
     }
 
-   
+    // OPT TEST:-l,-f
     @Test
     public void myMainTest38() throws Exception{
         File inputFile1 = createInputFile1();
@@ -986,7 +994,7 @@ public class MainTest {
 
     }
 
-
+    // OPT TEST:-f,-b
     @Test
     public void myMainTest39() throws Exception{
         File inputFile1 = createInputFile1();
@@ -1008,7 +1016,7 @@ public class MainTest {
 
     }
 
-   
+    // OPT TEST:-l,-b
     @Test
     public void myMainTest40() throws Exception{
         File inputFile1 = createInputFile1();
@@ -1029,6 +1037,7 @@ public class MainTest {
         assertTrue(Files.exists(Paths.get(inputFile1.getPath() + ".bck")));
 
     }
+    // OPT TEST:-b
     @Test
     public void myMainTest41() throws Exception{
         File inputFile1 = createInputFile1();
@@ -1049,6 +1058,8 @@ public class MainTest {
         assertTrue(Files.exists(Paths.get(inputFile1.getPath() + ".bck")));
 
     }
+    // OPT TEST:-b,-l,-f,-i
+    @Test
     public void myMainTest42() throws Exception{
         File inputFile1 = createInputFile1();
 
@@ -1068,6 +1079,8 @@ public class MainTest {
         assertTrue(Files.exists(Paths.get(inputFile1.getPath() + ".bck")));
 
     }
+    // OPT TEST:-b,-l,-f,-i 
+    @Test
     public void myMainTest43() throws Exception{
         File inputFile1 = createInputFile1();
 
@@ -1087,6 +1100,7 @@ public class MainTest {
         assertTrue(Files.exists(Paths.get(inputFile1.getPath() + ".bck")));
 
     }
+    // OPT TEST: no opt,replace letter with number
     @Test
     public void mainTest44() throws Exception {
         
@@ -1109,6 +1123,7 @@ public class MainTest {
   
         assertTrue(Files.exists(Paths.get(inputFile2.getPath() + ".bck")));
 }
+    // OPT TEST:-f,-f
     @Test
     public void mainTest45() throws Exception {
         
@@ -1131,6 +1146,7 @@ public class MainTest {
   
         assertTrue(Files.exists(Paths.get(inputFile2.getPath() + ".bck")));
 }
+    // OPT TEST:-i,-i
     @Test
     public void mainTest46() throws Exception {
         
