@@ -17,25 +17,15 @@ public class BuggyClass {
 
 	    public int buggyMethod2(int a, int b){
 	    	int result = a+b;//1: 2,2 2:3,2
-	    	if(a+b>2)
-	    		b=2;
-	    	if(result/b != 2 )
+	    	if(result/b!=2)
 	    		return 2;
-	    	else
+	    	else if(result>2)
 	    		return 1;	
+		
 	    }
 
 	    public void buggyMethod3(int a, int b){
-	    	/*
-	    	 buggyMethod3 that contains a division by zero fault such that (1) it is possible to create a test suite that
-			 achieves 100% branch coverage and does not reveal the fault, and (2) it is possible to create a test suite that achieves 100% statement coverage, does
-			 not achieve 100% branch coverage, and reveals the fault. 
-			 This is impossible because if you have a 100% branch coverage with division by zero.
-	         Which means we get 100% statement coverage that means every line of codes in the method
-			 happened to be executed,so every outcome from the method is tested.Therefore, if we change one of the branches to be
-             error, we still can't get 100% statement coverage with less than 100% branch coverage.
 	    	
-	    	*/
 	     
 	    }
 
